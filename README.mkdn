@@ -1,0 +1,98 @@
+# NAME
+
+Perl::Critic::Policy::logicLAB::ModuleBlacklist - blacklist modules you do not want in your code base
+
+# AFFILIATION
+
+This policy is a policy in the Perl::Critic::logicLAB distribution. The policy
+is themed: logiclab.
+
+# VERSION
+
+This documentation describes version 0.01.
+
+# DESCRIPTION
+
+# CONFIGURATION AND ENVIRONMENT
+
+# DEPENDENCIES AND REQUIREMENTS
+
+- [Perl](https://metacpan.org/pod/Perl) 5.8.0
+- [Module::Build](https://metacpan.org/pod/Module::Build)
+- [Perl::Critic](https://metacpan.org/pod/Perl::Critic)
+- [Perl::Critic::Utils](https://metacpan.org/pod/Perl::Critic::Utils)
+- [Perl::Critic::Policy](https://metacpan.org/pod/Perl::Critic::Policy)
+- [Test::More](https://metacpan.org/pod/Test::More)
+- [Test::Perl::Critic](https://metacpan.org/pod/Test::Perl::Critic)
+- [Data::Dumper](https://metacpan.org/pod/Data::Dumper)
+- [Carp](https://metacpan.org/pod/Carp)
+
+# INCOMPATIBILITIES
+
+This distribution has no known incompatibilities.
+
+# BUGS AND LIMITATIONS
+
+There are no known bugs or limitations
+
+# TEST AND QUALITY
+
+The following policies have been disabled for this distribution
+
+- [Perl::Critic::Policy::ValuesAndExpressions::ProhibitConstantPragma](https://metacpan.org/pod/Perl::Critic::Policy::ValuesAndExpressions::ProhibitConstantPragma)
+
+    Constants are good, - see the link below.
+
+    - [https://logiclab.jira.com/wiki/display/OPEN/Perl-Critic-Policy-ValuesAndExpressions-ProhibitConstantPragma](https://logiclab.jira.com/wiki/display/OPEN/Perl-Critic-Policy-ValuesAndExpressions-ProhibitConstantPragma)
+
+- [Perl::Critic::Policy::NamingConventions::Capitalization](https://metacpan.org/pod/Perl::Critic::Policy::NamingConventions::Capitalization)
+
+See also `t/perlcriticrc`
+
+## TEST COVERAGE
+
+Coverage test executed the following way, the coverage report is based on the
+version described in this documentation (see ["VERSION"](#version)).
+
+    ./Build testcover
+
+    ---------------------------- ------ ------ ------ ------ ------ ------ ------
+    File                           stmt   bran   cond    sub    pod   time  total
+    ---------------------------- ------ ------ ------ ------ ------ ------ ------
+    ...gicLAB/ModuleBlacklist.pm   88.9   63.6   40.0  100.0  100.0  100.0   83.6
+    Total                          88.9   63.6   40.0  100.0  100.0  100.0   83.6
+    ---------------------------- ------ ------ ------ ------ ------ ------ ------
+
+# BUG REPORTING
+
+Please report issues via CPAN RT:
+
+    http://rt.cpan.org/NoAuth/Bugs.html?Dist=Perl-Critic-Policy-logicLAB-ModuleBlacklist
+
+or by sending mail to
+
+    bug-Perl-Critic-Policy-logicLAB-ModuleBlacklist@rt.cpan.org
+
+# SEE ALSO
+
+- [Perl::Critic](https://metacpan.org/pod/Perl::Critic)
+- [http://logiclab.jira.com/wiki/display/PCLL/Home](http://logiclab.jira.com/wiki/display/PCLL/Home)
+
+# AUTHOR
+
+- Jonas B. Nielsen, jonasbn `<jonasbn@cpan.org>`
+
+# ACKNOWLEDGEMENT
+
+- Jeffrey Ryan Thalhammer (THALJEF) and the Perl::Critic contributors for
+Perl::Critic
+
+# LICENSE AND COPYRIGHT
+
+Copyright (c) 2014 Jonas B. Nielsen, jonasbn. All rights reserved.
+
+Perl::Critic::Policy::logicLAB::ModuleBlacklist;  is released under
+the Artistic License 2.0
+
+The distribution is licensed under the Artistic License 2.0, as specified by
+the license file included in this distribution.
