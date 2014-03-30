@@ -28,6 +28,7 @@ sub applies_to {
 sub violates {
     my ( $self, $elem ) = @_;
 
+    #Policy not configured, nothing to assert
     if ( not $self->{_modules} ) {
         return;
     }
@@ -97,17 +98,11 @@ sub initialize_if_enabled {
 sub _parse_modules {
     my ( $self, $config_string ) = @_;
 
-    if ( $self->{debug} ) {
-        carp "Blacklist config_string is: $config_string";
-    }
-
+    #first we split on commas
     my @parameters = split /\s*,\s*/, $config_string;
     my %modules;
 
-    if ( $self->{debug} ) {
-        carp 'Blacklist parameters are: ', Dumper \@parameters;
-    }
-
+    #then we split on fat commas, to locate recommendations
     foreach my $parameter (@parameters) {
         if ( $parameter =~ m/\s*=>\s*/ ) {
             my @p = split /\s*=>\s*/, $parameter;
@@ -116,11 +111,6 @@ sub _parse_modules {
         } else {
             $modules{$parameter} = undef;
         }
-    }
-
-    if ( $self->{debug} ) {
-        print STDERR "our split line:\n";
-        print STDERR Dumper \%modules;
     }
 
     return \%modules;
@@ -147,15 +137,91 @@ This documentation describes version 0.01.
 
 =head1 DESCRIPTION
 
+=head1 CONFIGURATION AND ENVIRONMENT
+
+=head1 DEPENDENCIES AND REQUIREMENTS
+
+=over
+
+=item * L<Perl> 5.8.0
+
+=item * L<Module::Build>
+
+=item * L<Perl::Critic>
+
+=item * L<Perl::Critic::Utils>
+
+=item * L<Perl::Critic::Policy>
+
+=item * L<Test::More>
+
+=item * L<Test::Perl::Critic>
+
+=item * L<Data::Dumper>
+
+=item * L<Carp>
+
+=back
+
+=head1 INCOMPATIBILITIES
+
+This distribution has no known incompatibilities.
+
+=head1 BUGS AND LIMITATIONS
+
+There are no known bugs or limitations
+
+=head1 TEST AND QUALITY
+
+The following policies have been disabled for this distribution
+
+=over
+
+=item * L<Perl::Critic::Policy::ValuesAndExpressions::ProhibitConstantPragma>
+
+Constants are good, - see the link below.
+
+=over
+
+=item * L<https://logiclab.jira.com/wiki/display/OPEN/Perl-Critic-Policy-ValuesAndExpressions-ProhibitConstantPragma>
+
+=back
+
+=item * L<Perl::Critic::Policy::NamingConventions::Capitalization>
+
+=back
+
+See also F<t/perlcriticrc>
+
+=head2 TEST COVERAGE
+
+Coverage test executed the following way, the coverage report is based on the
+version described in this documentation (see L</VERSION>).
+
+    ./Build testcover
+
+    ---------------------------- ------ ------ ------ ------ ------ ------ ------
+    File                           stmt   bran   cond    sub    pod   time  total
+    ---------------------------- ------ ------ ------ ------ ------ ------ ------
+    ...gicLAB/ModuleBlacklist.pm   88.9   63.6   40.0  100.0  100.0  100.0   83.6
+    Total                          88.9   63.6   40.0  100.0  100.0  100.0   83.6
+    ---------------------------- ------ ------ ------ ------ ------ ------ ------
+
+=head1 BUG REPORTING
+
+Please report issues via CPAN RT:
+
+  http://rt.cpan.org/NoAuth/Bugs.html?Dist=Perl-Critic-Policy-logicLAB-ModuleBlacklist
+
+or by sending mail to
+
+  bug-Perl-Critic-Policy-logicLAB-ModuleBlacklist@rt.cpan.org
+
 =head1 SEE ALSO
 
 =over
 
 =item * L<Perl::Critic>
-
-=item * perlmod manpage: L<http://perldoc.perl.org/perlmod.html>
-
-=item * L<http://logiclab.jira.com/wiki/display/PCPLRPNP/Home>
 
 =item * L<http://logiclab.jira.com/wiki/display/PCLL/Home>
 

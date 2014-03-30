@@ -22,11 +22,11 @@ my $build = Module::Build->new(
         'Perl::Critic::Policy' => '0',
         'Perl::Critic::Utils'  => '0',
         'perl'                 => '5.8.0',
+        'Carp'                 => '0', #core
+        'Data::Dumper'         => '0', #core
     },
     build_requires => {
-        'File::Spec'          => '0',    #core
         'Test::Perl::Critic'  => '0',
-        'Test::Prereq::Build' => '0',
     },
     meta_merge => {
         resources => {

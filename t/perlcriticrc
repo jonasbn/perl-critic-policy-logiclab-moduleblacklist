@@ -17,17 +17,20 @@ keywords = Id
 [CodeLayout::ProhibitHardTabs]
 allow_leading_tabs = 0
 
+#Ref: https://logiclab.jira.com/wiki/display/OPEN/Perl-Critic-Policy-ValuesAndExpressions-ProhibitConstantPragma
 [-ValuesAndExpressions::ProhibitConstantPragma]
 
+#I write logicLAB, as logicLAB
 [-NamingConventions::Capitalization]
 
 [-Documentation::RequirePodLinksIncludeText]
 
-[-Bangs::ProhibitDebuggingModules]
-
 [-Editor::RequireEmacsFileVariables]
 
 # TODO
+
+#Using Data::Dumper for now
+[-Bangs::ProhibitDebuggingModules]
 
 [-InputOutput::RequireBracedFileHandleWithPrint]
 [-RegularExpressions::RequireDotMatchAnything]
