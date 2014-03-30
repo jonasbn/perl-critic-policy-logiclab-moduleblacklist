@@ -83,7 +83,7 @@ sub initialize_if_enabled {
     my $modules = $config->get('modules');
 
     if ( $self->{debug} ) {
-        warn "Blacklisted modules are: $modules\n";
+        carp "Blacklisted modules are: $modules\n";
     }
 
     #parsing blacklisted modules, see also _parse_blacklist
@@ -98,14 +98,14 @@ sub _parse_modules {
     my ( $self, $config_string ) = @_;
 
     if ( $self->{debug} ) {
-        warn "Blacklist config_string is: ", $config_string;
+        carp "Blacklist config_string is: ", $config_string;
     }
 
     my @parameters = split /\s*,\s*/, $config_string;
     my %modules;
 
     if ( $self->{debug} ) {
-        warn "Blacklist parameters are: ", Dumper \@parameters;
+        carp "Blacklist parameters are: ", Dumper \@parameters;
     }
 
     foreach my $parameter (@parameters) {
