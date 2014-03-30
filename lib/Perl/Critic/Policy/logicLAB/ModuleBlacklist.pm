@@ -4,7 +4,7 @@ package Perl::Critic::Policy::logicLAB::ModuleBlacklist;
 
 use strict;
 use warnings;
-use 5.006;
+use 5.008;
 
 use base 'Perl::Critic::Policy';
 use Perl::Critic::Utils qw{ $SEVERITY_MEDIUM :booleans};
@@ -38,15 +38,15 @@ sub violates {
 
         my $package = $children[2]->content;
 
-        if ($self->{debug}) {
+        if ( $self->{debug} ) {
             print STDERR "located include: $package\n";
         }
 
-        foreach my $module (keys %{$self->{_modules}}) {
+        foreach my $module ( keys %{ $self->{_modules} } ) {
 
-            if ( $package eq $module  ) {
+            if ( $package eq $module ) {
 
-                if (defined $self->{_modules}->{$module}) {
+                if ( defined $self->{_modules}->{$module} ) {
                     my $recommendation = $self->{_modules}->{$module};
                     return $self->violation(
                         "Blacklisted: $package is not recommended by required standard",
@@ -82,7 +82,7 @@ sub initialize_if_enabled {
     #fetching list of blacklisted modules
     my $modules = $config->get('modules');
 
-    if ($self->{debug}) {
+    if ( $self->{debug} ) {
         warn "Blacklisted modules are: $modules\n";
     }
 
@@ -97,28 +97,28 @@ sub initialize_if_enabled {
 sub _parse_modules {
     my ( $self, $config_string ) = @_;
 
-    if ($self->{debug}) {
+    if ( $self->{debug} ) {
         warn "Blacklist config_string is: ", $config_string;
     }
 
     my @parameters = split /\s*,\s*/, $config_string;
     my %modules;
 
-    if ($self->{debug}) {
+    if ( $self->{debug} ) {
         warn "Blacklist parameters are: ", Dumper \@parameters;
     }
 
     foreach my $parameter (@parameters) {
-        if ($parameter =~ m/\s*=>\s*/) {
+        if ( $parameter =~ m/\s*=>\s*/ ) {
             my @p = split /\s*=>\s*/, $parameter;
 
-            $modules{$p[0]} = $p[1];
+            $modules{ $p[0] } = $p[1];
         } else {
             $modules{$parameter} = undef;
         }
     }
 
-    if ($self->{debug}) {
+    if ( $self->{debug} ) {
         print STDERR "our split line:\n";
         print STDERR Dumper \%modules;
     }
@@ -153,7 +153,7 @@ This documentation describes version 0.01.
 
 =item * L<Perl::Critic>
 
-=item * L<perlmod manpage|http://perldoc.perl.org/perlmod.html>
+=item * perlmod manpage: L<http://perldoc.perl.org/perlmod.html>
 
 =item * L<http://logiclab.jira.com/wiki/display/PCPLRPNP/Home>
 
