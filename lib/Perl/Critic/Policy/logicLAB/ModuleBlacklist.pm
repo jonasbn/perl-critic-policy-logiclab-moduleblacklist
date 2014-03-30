@@ -227,6 +227,24 @@ or by sending mail to
 
 =back
 
+=head1 MOTIVATION
+
+I once read a article which compared programming languages to
+natural languages. Programming languages in themselves are not
+large as such, but if you also regard the APIs, data structures
+and components a computer programmer use on a daily basis, the
+amount is enourmous.
+
+Where I work We try to keep a more simple code base, the complexity
+is in our business and that is our primary problem area, so it should
+not be difficult to understand the code used to model this complexity.
+
+So sometimes it is necessary to make a decision on what should be
+allowed in our code base and what should not can be hard to decide.
+This policy aims to solve thatso the dicussion should be on the conding
+guidelines and the iseuse of the policy, instead of taking focus during
+peer review sessions.
+
 =head1 AUTHOR
 
 =over
