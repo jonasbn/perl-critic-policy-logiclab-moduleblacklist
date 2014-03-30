@@ -26,25 +26,84 @@ my $critic = Perl::Critic->new(
     }
 }
 
-my $str = q{package Acme::BadCode;
+#Basic use
+{
+    my $str = q{package Acme::ContainsBlacklisted;
+    use Contextual::Return;
+    };
 
-use Contextual::Return;
-use Try::Tiny;
-use IDNA::Encode;
-};
+    my @violations = $critic->critique( \$str );
 
-my @violations = $critic->critique( \$str );
+    is( scalar @violations, 1 );
 
-is( scalar @violations, 3 );
+    foreach my $violation (@violations) {
+        like( $violation->explanation,
+            qr{Use alternative implementation or module instead of Contextual::Return} );
+        like( $violation->description,
+            qr{Blacklisted: Contextual::Return is not recommended by required standard} );
+    }
 
-foreach my $violation (@violations) {
-    is( $violation->explanation,
-        q{Use Params::Validate for public facing APIs} );
-    is( $violation->description,
-        q{Parameter validation not complying with required standard} );
+    if ($TEST_VERBOSE) {
+        diag Dumper \@violations;
+    }
 }
 
-if ($TEST_VERBOSE) {
-    diag Dumper \@violations;
+#With recommendation
+{
+    my $str = q{package Acme::ContainsBlacklisted;
+    use Try::Tiny;
+    };
+
+    my @violations = $critic->critique( \$str );
+
+    is( scalar @violations, 1 );
+
+    foreach my $violation (@violations) {
+        like( $violation->explanation,
+            qr{Use recommended module: TryCatch instead of Try::Tiny} );
+        like( $violation->description,
+            qr{Blacklisted: Try::Tiny is not recommended by required standard} );
+    }
+
+    if ($TEST_VERBOSE) {
+        diag Dumper \@violations;
+    }
+}
+
+#Multiple violations
+{
+    my $str = q{package Acme::ContainsBlacklisted;
+    use IDNA::Punycode;
+    use Contextual::Return;
+    };
+
+    my @violations = $critic->critique( \$str );
+
+    is( scalar @violations, 2 );
+
+    foreach my $violation (@violations) {
+        like( $violation->explanation,
+            qr{Use (recommended module: [\w:]+|alternative implementation or module) instead of [\w:]+} );
+        like( $violation->description,
+            qr{Blacklisted: [\w:]+ is not recommended by required standard} );
+    }
+
+    if ($TEST_VERBOSE) {
+        diag Dumper \@violations;
+    }
+}
+
+#No violations
+{
+    my $str = q{package Acme::ContainsNoBlacklisted;
+    use strict;
+    use warnings;
+    use Net::IDN::Encode qw(:all);
+    use TryCatch;
+    };
+
+    my @violations = $critic->critique( \$str );
+
+    is( scalar @violations, 0 );
 }
 
