@@ -1,4 +1,4 @@
-# Build.PL for Perl::Critic::Policy::logicLAB::RequireParamsValidate
+# Build.PL for Perl::Critic::Policy::logicLAB::ModuleBlacklist
 
 # $Id: Build.PL 7707 2011-06-08 21:19:25Z jonasbn $
 
@@ -9,7 +9,6 @@ use Module::Build;
 my $build = Module::Build->new(
     dist_author => 'Jonas B. Nielsen, (jonasbn) <jonasbn@cpan.org>',
     module_name => 'Perl::Critic::Policy::logicLAB::ModuleBlacklist',
-    #abstract_from => 'lib/Perl/Critic/Policy/logicLAB/RequireParamsValidate.pm',
     dist_version_from =>
         'lib/Perl/Critic/Policy/logicLAB/ModuleBlacklist.pm',
     license => 'artistic_2',
@@ -17,6 +16,7 @@ my $build = Module::Build->new(
     create_makefile_pl   => 'traditional',
     create_readme        => 1,
     recursive_test_files => 1,
+    create_license       => 1,
     configure_requires => { 'Module::Build' => '0.40' },
     requires             => {
         'Perl::Critic::Policy' => '0',
