@@ -26,3 +26,11 @@ allow_leading_tabs = 0
 [-Bangs::ProhibitDebuggingModules]
 
 [-Editor::RequireEmacsFileVariables]
+
+# TODO
+
+[-InputOutput::RequireBracedFileHandleWithPrint]
+[-RegularExpressions::RequireDotMatchAnything]
+[-RegularExpressions::RequireExtendedFormatting]
+[-RegularExpressions::RequireLineBoundaryMatching]
+[-InputOutput::RequireCheckedSyscalls]

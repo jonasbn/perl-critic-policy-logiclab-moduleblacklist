@@ -51,7 +51,7 @@ sub violates {
                     return $self->violation(
                         "Blacklisted: $package is not recommended by required standard",
                         "Use recommended module: $recommendation instead of $package",
-                        $elem
+                        $elem,
                     );
 
                 } else {
@@ -59,7 +59,7 @@ sub violates {
                     return $self->violation(
                         "Blacklisted: $package is not recommended by required standard",
                         "Use alternative implementation or module instead of $package",
-                        $elem
+                        $elem,
                     );
                 }
             }
@@ -98,14 +98,14 @@ sub _parse_modules {
     my ( $self, $config_string ) = @_;
 
     if ( $self->{debug} ) {
-        carp "Blacklist config_string is: ", $config_string;
+        carp "Blacklist config_string is: $config_string";
     }
 
     my @parameters = split /\s*,\s*/, $config_string;
     my %modules;
 
     if ( $self->{debug} ) {
-        carp "Blacklist parameters are: ", Dumper \@parameters;
+        carp 'Blacklist parameters are: ', Dumper \@parameters;
     }
 
     foreach my $parameter (@parameters) {
