@@ -30,13 +30,9 @@ my $build = Module::Build->new(
     },
     meta_merge => {
         resources => {
-            homepage => 'http://logiclab.jira.com/wiki/display/PCPLRPV/Home',
-            bugtracker => 'http://rt.cpan.org/NoAuth/Bugs.html?Dist=Perl-Critic-Policy-logicLAB-RequireParamsValidate',
-            repository => 'https://github.com/jonasbn/pcplrpv',
-            ProjectChangelog =>
-                'http://logiclab.jira.com/browse/PCPLRPV#selectedTab=com.atlassian.jira.plugin.system.project%3Achangelog-panel',
-            ProjectSite => 'http://logicLAB.jira.com/browse/PCPLRPV',
-            ProjectWiki => 'http://logiclab.jira.com/wiki/display/PCPLRPV/Home',
+            homepage => 'https://github.com/jonasbn/Perl-Critic-Policy-logicLAB-ModuleBlacklist',
+            bugtracker => 'http://rt.cpan.org/NoAuth/Bugs.html?Dist=Perl-Critic-Policy-logicLAB-ModuleBlacklist',
+            repository => 'https://github.com/jonasbn/Perl-Critic-Policy-logicLAB-ModuleBlacklist',
         }
     },
 );
