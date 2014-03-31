@@ -10,6 +10,8 @@
 \B\.gitignore\b
 \b_darcs\b
 \B\.cvsignore$
+.gitignore
+.git
 
 # Avoid VMS specific MakeMaker generated files
 \bDescrip.MMS$
@@ -71,3 +73,8 @@
 
 # Avoid archives of this distribution
 \bPerl-Critic-Policy-logicLAB-ModuleBlacklist-[\d\.\_]+
+
+# Github files
+.travis.yml
+README.mkdn
+
