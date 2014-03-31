@@ -124,7 +124,7 @@ __END__
 
 =head1 NAME
 
-Perl::Critic::Policy::logicLAB::ModuleBlacklist - blacklist modules you do not want in your code base
+Perl::Critic::Policy::logicLAB::ModuleBlacklist - blacklist modules you want to prohibit use of
 
 =head1 AFFILIATION
 
@@ -137,7 +137,30 @@ This documentation describes version 0.01.
 
 =head1 DESCRIPTION
 
+This policy can be used to specify a list of unwanted modules. Using a blacklisting, so if the 
+modules are used in the evaluated code a violation is triggered.
+
+In addition to blacklisting modules it is possible to recoomend alternatives to 
+blacklisted modules.
+
 =head1 CONFIGURATION AND ENVIRONMENT
+
+=head2 modules
+
+You can blacklist modules using the configuration parameter B<modules>
+
+    [logicLAB::ModuleBlacklist]
+    modules = IDNA::Punycode
+
+If you want to blacklist multiple modules specify using a comma separated list:
+
+    [logicLAB::ModuleBlacklist]
+    modules = Try::Tiny, Contextual::Return, IDNA::Punycode
+
+If you want to recommend alternatives to, use fat comma in addition
+
+    [logicLAB::ModuleBlacklist]
+    modules = Try::Tiny => TryCatch, Contextual::Return, IDNA::Punycode => Net::IDN::Encode
 
 =head1 DEPENDENCIES AND REQUIREMENTS
 
@@ -240,10 +263,8 @@ is in our business and that is our primary problem area, so it should
 not be difficult to understand the code used to model this complexity.
 
 So sometimes it is necessary to make a decision on what should be
-allowed in our code base and what should not can be hard to decide.
-This policy aims to solve thatso the dicussion should be on the conding
-guidelines and the iseuse of the policy, instead of taking focus during
-peer review sessions.
+allowed in our code base and what should not. This policy aims to
+support this coding standard.
 
 =head1 AUTHOR
 
