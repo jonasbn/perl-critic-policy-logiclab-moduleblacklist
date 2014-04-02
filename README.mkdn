@@ -103,11 +103,11 @@ or by sending mail to
 
 # MOTIVATION
 
-I once read a article which compared programming languages to
+I once read an article which compared programming languages to
 natural languages. Programming languages in themselves are not
 large as such, but if you also regard the APIs, data structures
 and components a computer programmer use on a daily basis, the
-amount is enourmous.
+amount is enormous.
 
 Where I work We try to keep a more simple code base, the complexity
 is in our business and that is our primary problem area, so it should
