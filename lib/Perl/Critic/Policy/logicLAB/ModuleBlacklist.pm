@@ -266,6 +266,9 @@ So sometimes it is necessary to make a decision on what should be
 allowed in our code base and what should not. This policy aims to
 support this coding practice.
 
+The practice it basically to prohibit problematic components and
+recommend alternatives where possible.
+
 =head1 AUTHOR
 
 =over
