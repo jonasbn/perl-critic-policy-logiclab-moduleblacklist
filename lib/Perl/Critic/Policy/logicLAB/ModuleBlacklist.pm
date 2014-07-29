@@ -264,7 +264,7 @@ not be difficult to understand the code used to model this complexity.
 
 So sometimes it is necessary to make a decision on what should be
 allowed in our code base and what should not. This policy aims to
-support this coding standard.
+support this coding practice.
 
 =head1 AUTHOR
 
