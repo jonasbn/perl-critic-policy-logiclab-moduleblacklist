@@ -140,7 +140,7 @@ This documentation describes version 0.01.
 This policy can be used to specify a list of unwanted modules. Using a blacklisting, so if the 
 modules are used in the evaluated code a violation is triggered.
 
-In addition to blacklisting modules it is possible to recoomend alternatives to 
+In addition to blacklisting modules it is possible to recommend alternatives to
 blacklisted modules.
 
 =head1 CONFIGURATION AND ENVIRONMENT
