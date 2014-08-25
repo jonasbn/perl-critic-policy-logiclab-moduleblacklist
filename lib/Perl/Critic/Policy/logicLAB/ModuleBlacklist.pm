@@ -125,6 +125,8 @@ __END__
 
 =pod
 
+=encoding utf8
+
 =head1 NAME
 
 Perl::Critic::Policy::logicLAB::ModuleBlacklist - blacklist modules you want to prohibit use of
