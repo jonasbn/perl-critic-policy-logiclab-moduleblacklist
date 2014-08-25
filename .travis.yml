@@ -26,6 +26,10 @@ install:
 
    - cpanm --quiet --notest Devel::Cover::Report::Coveralls
 
+   # Getting cover command for Dist::Zilla
+
+   - cpanm --quiet --notest Dist::Zilla::App::Command::cover
+
    - dzil authordeps | grep -vP '[^\w:]' | xargs -n 5 -P 10 cpanm --quiet --notest --skip-satisfied
 
    - dzil listdeps --author | cpanm --quiet --notest --skip-satisfied
@@ -38,8 +42,6 @@ script:
 
    - dzil smoke --release --author
 
-   - cover test
-
 after_success:
 
-    - cover -report coveralls
+    - dzil cover -outputdir cover_db -report coveralls
