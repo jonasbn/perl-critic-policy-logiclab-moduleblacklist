@@ -1,4 +1,4 @@
-[![CPAN version](https://badge.fury.io/pl/Module-Info-File.svg)](http://badge.fury.io/pl/Perl-Critic-Policy-logicLAB-ModuleBlacklist)
+[![CPAN version](https://badge.fury.io/pl/Perl-Critic-Policy-logicLAB-ModuleBlacklist.svg)](http://badge.fury.io/pl/Perl-Critic-Policy-logicLAB-ModuleBlacklist)
 [![Build Status](https://travis-ci.org/jonasbn/Perl-Critic-Policy-logicLAB-ModuleBlacklist.svg?branch=master)](https://travis-ci.org/jonasbn/Perl-Critic-Policy-logicLAB-ModuleBlacklist)
 
 # NAME
