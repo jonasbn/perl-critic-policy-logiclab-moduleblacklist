@@ -1,3 +1,6 @@
+[![CPAN version](https://badge.fury.io/pl/Module-Info-File.svg)](http://badge.fury.io/pl/Perl-Critic-Policy-logicLAB-ModuleBlacklist)
+[![Build Status](https://travis-ci.org/jonasbn/Perl-Critic-Policy-logicLAB-ModuleBlacklist.svg?branch=master)](https://travis-ci.org/jonasbn/Perl-Critic-Policy-logicLAB-ModuleBlacklist)
+
 # NAME
 
 Perl::Critic::Policy::logicLAB::ModuleBlacklist - blacklist modules you want to prohibit use of
@@ -9,14 +12,14 @@ is themed: logiclab.
 
 # VERSION
 
-This documentation describes version 0.01.
+This documentation describes version 0.02
 
 # DESCRIPTION
 
 This policy can be used to specify a list of unwanted modules. Using a blacklisting, so if the 
 modules are used in the evaluated code a violation is triggered.
 
-In addition to blacklisting modules it is possible to recoomend alternatives to 
+In addition to blacklisting modules it is possible to recommend alternatives to
 blacklisted modules.
 
 # CONFIGURATION AND ENVIRONMENT
@@ -115,7 +118,10 @@ not be difficult to understand the code used to model this complexity.
 
 So sometimes it is necessary to make a decision on what should be
 allowed in our code base and what should not. This policy aims to
-support this coding standard.
+support this coding practice.
+
+The practice it basically to prohibit problematic components and
+recommend alternatives where possible.
 
 # AUTHOR
 
@@ -125,6 +131,7 @@ support this coding standard.
 
 - Jeffrey Ryan Thalhammer (THALJEF) and the Perl::Critic contributors for
 Perl::Critic
+- Milan Šorm for the first bug report on this policy
 
 # LICENSE AND COPYRIGHT
 
