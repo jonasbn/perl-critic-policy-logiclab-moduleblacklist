@@ -1,5 +1,13 @@
 Changes file for Perl::Critic::Policy::logicLAB::ModuleBlacklist
 
+0.02 2014-08-25 bug fix release, update recommended
+
+- Addressed issue #1. The policy did not ignore 'no' use statements, which are
+  used for pragma, instead it died
+
+  https://github.com/jonasbn/Perl-Critic-Policy-logicLAB-ModuleBlacklist/issues/1
+
+
 0.01 2014-03-31
 
 - Initial release

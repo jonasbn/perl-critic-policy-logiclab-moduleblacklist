@@ -107,3 +107,13 @@ my $critic = Perl::Critic->new(
     is( scalar @violations, 0 );
 }
 
+#no statement [issue #1]
+{
+    my $str = q{package Acme::ContainsNoBlacklisted;
+    no warnings;
+    };
+
+    my @violations = $critic->critique( \$str );
+
+    is( scalar @violations, 0 );
+}

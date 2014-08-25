@@ -66,6 +66,11 @@ sub violates {
             }
         }
 
+    #we ignore negative use statements, they are for pragma [issue1]
+    } elsif ( $children[0]->content eq 'no' ) {
+        if ( $self->{debug} ) {
+            print STDERR "located 'no' use statement\n";
+        }
     } else {
         carp 'Unable to locate package keyword';
     }
@@ -283,6 +288,8 @@ recommend alternatives where possible.
 
 =item * Jeffrey Ryan Thalhammer (THALJEF) and the Perl::Critic contributors for
 Perl::Critic
+
+=item * Milan Šorm for the first bug report on this policy
 
 =back
 
