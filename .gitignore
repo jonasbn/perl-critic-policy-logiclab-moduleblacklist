@@ -22,3 +22,5 @@ Makefile.PL
 *.tar
 *.gz
 README
+*.sublime-project
+*.sublime-workspace

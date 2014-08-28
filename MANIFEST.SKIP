@@ -74,6 +74,10 @@
 # Avoid archives of this distribution
 \bPerl-Critic-Policy-logicLAB-ModuleBlacklist-[\d\.\_]+
 
+# SublimeText 2 project files
+\.sublime-project
+\.sublime-workspace
+
 # Github files
 .travis.yml
 README.mkdn
