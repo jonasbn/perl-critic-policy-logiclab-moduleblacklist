@@ -33,7 +33,7 @@ sub violates {
 
     my @children = $elem->children;
 
-    if ( $children[0]->content eq 'use' ) {
+    if ( $children[0]->content eq 'use' or $children[0]->content eq 'require') {
 
         my $package = $children[2]->content;
 
