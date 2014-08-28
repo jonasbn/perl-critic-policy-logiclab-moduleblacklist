@@ -9,7 +9,7 @@ use Perl::Critic::Utils qw{ $SEVERITY_MEDIUM :booleans};
 use Carp qw(carp);
 use Data::Dumper;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use constant supported_parameters => qw(modules debug);
 use constant default_severity     => $SEVERITY_MEDIUM;
@@ -138,7 +138,7 @@ is themed: logiclab.
 
 =head1 VERSION
 
-This documentation describes version 0.02
+This documentation describes version 0.03
 
 =head1 DESCRIPTION
 
@@ -289,7 +289,7 @@ recommend alternatives where possible.
 =item * Jeffrey Ryan Thalhammer (THALJEF) and the Perl::Critic contributors for
 Perl::Critic
 
-=item * Milan Šorm for the first bug report on this policy
+=item * Milan Šorm for the first and second bug reports on this policy
 
 =back
 
