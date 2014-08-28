@@ -67,7 +67,7 @@ sub violates {
     #we ignore negative use statements, they are for pragma [issue1]
     } elsif ( $children[0]->content eq 'no' ) {
         if ( $self->{debug} ) {
-            print STDERR "located 'no' use statement\n";
+            print STDERR "located 'no' use/require statement\n";
         }
     } else {
         carp 'Unable to locate package keyword';
