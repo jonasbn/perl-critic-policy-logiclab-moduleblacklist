@@ -274,6 +274,21 @@ support this coding practice.
 The practice it basically to prohibit problematic components and
 recommend alternatives where possible.
 
+=head1 RECOMMENDATIONS
+
+Here follows some recommendations I have picked up. I have left my own out
+for now and only list recommendations from the module authors themselves.
+
+=over
+
+=item * L<Error> should be replaced by L<Class::Exception>, by recommendation
+the author
+
+=item * L<IDNA::Punycode> should be replaced by L<Net::IDN::Encode> by recommendation
+the author
+
+=back
+
 =head1 AUTHOR
 
 =over

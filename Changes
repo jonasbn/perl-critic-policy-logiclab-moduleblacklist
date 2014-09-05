@@ -1,5 +1,7 @@
 Changes file for Perl::Critic::Policy::logicLAB::ModuleBlacklist
 
+Added RECOMMENDATIONS section
+
 0.03 2014-08-28 bug fix release, update recommended
 
 - Addressed issue #2. The policy did not evaluate require statements
