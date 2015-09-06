@@ -276,8 +276,7 @@ recommend alternatives where possible.
 
 =head1 RECOMMENDATIONS
 
-Here follows some recommendations I have picked up. I have left my own out
-for now and only list recommendations from the module authors themselves.
+Here follows some recommendations I have picked up.
 
 =over
 
@@ -286,6 +285,11 @@ the author
 
 =item * L<IDNA::Punycode> should be replaced by L<Net::IDN::Encode> by recommendation
 the author
+
+=item * <File::Slurp> should be replaced by either <File::Slurper>, <Path::Tiny> or <IO::All>
+Ref: http://blogs.perl.org/users/leon_timmermans/2015/08/fileslurp-is-broken-and-wrong.html
+
+=item * <File::Stat> should be replaced by <File::stat>
 
 =back
 
@@ -310,7 +314,7 @@ Perl::Critic
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (c) 2014 Jonas B. Nielsen, jonasbn. All rights reserved.
+Copyright (c) 2014-2015 Jonas B. Nielsen, jonasbn. All rights reserved.
 
 Perl::Critic::Policy::logicLAB::ModuleBlacklist;  is released under
 the Artistic License 2.0
