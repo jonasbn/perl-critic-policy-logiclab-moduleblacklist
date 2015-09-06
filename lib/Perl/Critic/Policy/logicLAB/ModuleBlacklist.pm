@@ -287,7 +287,7 @@ the author
 the author
 
 =item * <File::Slurp> should be replaced by either <File::Slurper>, <Path::Tiny> or <IO::All>
-Ref: http://blogs.perl.org/users/leon_timmermans/2015/08/fileslurp-is-broken-and-wrong.html
+Ref: L<http://blogs.perl.org/users/leon_timmermans/2015/08/fileslurp-is-broken-and-wrong.html>
 
 =item * <File::Stat> should be replaced by <File::stat>
 
