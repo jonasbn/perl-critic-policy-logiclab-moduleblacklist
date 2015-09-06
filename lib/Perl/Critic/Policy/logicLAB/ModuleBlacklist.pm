@@ -18,8 +18,8 @@ use constant default_themes       => qw(logiclab);
 sub applies_to {
     return (
         qw(
-            PPI::Statement::Include
-            )
+          PPI::Statement::Include
+          )
     );
 }
 
@@ -33,7 +33,8 @@ sub violates {
 
     my @children = $elem->children;
 
-    if ( $children[0]->content eq 'use' or $children[0]->content eq 'require') {
+    if ( $children[0]->content eq 'use' or $children[0]->content eq 'require' )
+    {
 
         my $package = $children[2]->content;
 
@@ -48,28 +49,31 @@ sub violates {
                 if ( defined $self->{_modules}->{$module} ) {
                     my $recommendation = $self->{_modules}->{$module};
                     return $self->violation(
-                        "Blacklisted: $package is not recommended by required standard",
-                        "Use recommended module: $recommendation instead of $package",
+"Blacklisted: $package is not recommended by required standard",
+"Use recommended module: $recommendation instead of $package",
                         $elem,
                     );
 
-                } else {
+                }
+                else {
 
                     return $self->violation(
-                        "Blacklisted: $package is not recommended by required standard",
-                        "Use alternative implementation or module instead of $package",
+"Blacklisted: $package is not recommended by required standard",
+"Use alternative implementation or module instead of $package",
                         $elem,
                     );
                 }
             }
         }
 
-    #we ignore negative use statements, they are for pragma [issue1]
-    } elsif ( $children[0]->content eq 'no' ) {
+        #we ignore negative use statements, they are for pragma [issue1]
+    }
+    elsif ( $children[0]->content eq 'no' ) {
         if ( $self->{debug} ) {
             print STDERR "located 'no' use/require statement\n";
         }
-    } else {
+    }
+    else {
         carp 'Unable to locate package keyword';
     }
 
@@ -111,7 +115,8 @@ sub _parse_modules {
             my @p = split /\s*=>\s*/, $parameter;
 
             $modules{ $p[0] } = $p[1];
-        } else {
+        }
+        else {
             $modules{$parameter} = undef;
         }
     }
