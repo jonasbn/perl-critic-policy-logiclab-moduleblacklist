@@ -9,7 +9,7 @@ use Perl::Critic::Utils qw{ $SEVERITY_MEDIUM :booleans};
 use Carp qw(carp);
 use Data::Dumper;
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 use constant supported_parameters => qw(modules debug);
 use constant default_severity     => $SEVERITY_MEDIUM;

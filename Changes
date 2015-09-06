@@ -1,17 +1,22 @@
 Changes file for Perl::Critic::Policy::logicLAB::ModuleBlacklist
 
-Added RECOMMENDATIONS section
+0.04 2015-09-28 Maintenance release, update not required
 
-0.03 2014-08-28 bug fix release, update recommended
+- Addressed issue #3 and adding information on File::Slurp and some other
 
-- Addressed issue #2. The policy did not evaluate require statements
+- Added RECOMMENDATIONS section
+
+
+0.03 2014-08-06 Bug fix release, update recommended
+
+- Addressed issue #2, the policy did not evaluate require statements
 
   https://github.com/jonasbn/Perl-Critic-Policy-logicLAB-ModuleBlacklist/issues/2
 
 - Migrating build system from Module::Build to Dist::Zilla
 
 
-0.02 2014-08-25 bug fix release, update recommended
+0.02 2014-08-25 Bug fix release, update recommended
 
 - Addressed issue #1. The policy did not ignore 'no' use statements,
   which are used for pragma, instead it died

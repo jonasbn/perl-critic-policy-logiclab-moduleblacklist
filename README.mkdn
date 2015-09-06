@@ -1,7 +1,3 @@
-[![CPAN version](https://badge.fury.io/pl/Perl-Critic-Policy-logicLAB-ModuleBlacklist.svg)](http://badge.fury.io/pl/Perl-Critic-Policy-logicLAB-ModuleBlacklist)
-[![Build Status](https://travis-ci.org/jonasbn/Perl-Critic-Policy-logicLAB-ModuleBlacklist.svg?branch=master)](https://travis-ci.org/jonasbn/Perl-Critic-Policy-logicLAB-ModuleBlacklist)
-[![Coverage Status](https://coveralls.io/repos/jonasbn/Perl-Critic-Policy-logicLAB-ModuleBlacklist/badge.png)](https://coveralls.io/r/jonasbn/Perl-Critic-Policy-logicLAB-ModuleBlacklist)
-
 # NAME
 
 Perl::Critic::Policy::logicLAB::ModuleBlacklist - blacklist modules you want to prohibit use of
@@ -13,7 +9,7 @@ is themed: logiclab.
 
 # VERSION
 
-This documentation describes version 0.02
+This documentation describes version 0.03
 
 # DESCRIPTION
 
@@ -27,7 +23,7 @@ blacklisted modules.
 
 ## modules
 
-You can blacklist modules using the configuration parameter __modules__
+You can blacklist modules using the configuration parameter **modules**
 
     [logicLAB::ModuleBlacklist]
     modules = IDNA::Punycode
@@ -124,6 +120,18 @@ support this coding practice.
 The practice it basically to prohibit problematic components and
 recommend alternatives where possible.
 
+# RECOMMENDATIONS
+
+Here follows some recommendations I have picked up.
+
+- [Error](https://metacpan.org/pod/Error) should be replaced by [Class::Exception](https://metacpan.org/pod/Class::Exception), by recommendation
+the author
+- [IDNA::Punycode](https://metacpan.org/pod/IDNA::Punycode) should be replaced by [Net::IDN::Encode](https://metacpan.org/pod/Net::IDN::Encode) by recommendation
+the author
+- <File::Slurp> should be replaced by either <File::Slurper>, <Path::Tiny> or <IO::All>
+Ref: [http://blogs.perl.org/users/leon\_timmermans/2015/08/fileslurp-is-broken-and-wrong.html](http://blogs.perl.org/users/leon_timmermans/2015/08/fileslurp-is-broken-and-wrong.html)
+- <File::Stat> should be replaced by <File::stat>
+
 # AUTHOR
 
 - Jonas B. Nielsen, jonasbn `<jonasbn@cpan.org>`
@@ -132,13 +140,13 @@ recommend alternatives where possible.
 
 - Jeffrey Ryan Thalhammer (THALJEF) and the Perl::Critic contributors for
 Perl::Critic
-- Milan Šorm for the first bug report on this policy
+- Milan Šorm for the first and second bug reports on this policy
 
 # LICENSE AND COPYRIGHT
 
-Copyright (c) 2014 Jonas B. Nielsen, jonasbn. All rights reserved.
+Copyright (c) 2014-2015 Jonas B. Nielsen, jonasbn. All rights reserved.
 
-Perl::Critic::Policy::logicLAB::ModuleBlacklist;  is released under
+Perl::Critic::Policy::logicLAB::ModuleBlacklist is released under
 the Artistic License 2.0
 
 The distribution is licensed under the Artistic License 2.0, as specified by
