@@ -24,3 +24,4 @@ Makefile.PL
 README
 *.sublime-project
 *.sublime-workspace
+.vstags
