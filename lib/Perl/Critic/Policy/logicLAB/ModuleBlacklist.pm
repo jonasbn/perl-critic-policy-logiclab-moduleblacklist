@@ -147,7 +147,7 @@ This documentation describes version 0.03
 
 =head1 DESCRIPTION
 
-This policy can be used to specify a list of unwanted modules. Using a blacklisting, so if the 
+This policy can be used to specify a list of unwanted modules. Using a blacklisting, so if the
 modules are used in the evaluated code a violation is triggered.
 
 In addition to blacklisting modules it is possible to recommend alternatives to
@@ -291,10 +291,10 @@ the author
 =item * L<IDNA::Punycode> should be replaced by L<Net::IDN::Encode> by recommendation
 the author
 
-=item * <File::Slurp> should be replaced by either <File::Slurper>, <Path::Tiny> or <IO::All>
+=item * <File::Slurp> should be replaced by either L<File::Slurper>, L<Path::Tiny> or L<IO::All>
 Ref: L<http://blogs.perl.org/users/leon_timmermans/2015/08/fileslurp-is-broken-and-wrong.html>
 
-=item * <File::Stat> should be replaced by <File::stat>
+=item * L<File::Stat> should be replaced by L<File::stat>
 
 =back
 
