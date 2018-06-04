@@ -286,10 +286,10 @@ Here follows some recommendations I have picked up.
 =over
 
 =item * L<Error> should be replaced by L<Class::Exception>, by recommendation
-the author
+of the author
 
 =item * L<IDNA::Punycode> should be replaced by L<Net::IDN::Encode> by recommendation
-the author
+of the author
 
 =item * <File::Slurp> should be replaced by either L<File::Slurper>, L<Path::Tiny> or L<IO::All>
 Ref: L<http://blogs.perl.org/users/leon_timmermans/2015/08/fileslurp-is-broken-and-wrong.html>
