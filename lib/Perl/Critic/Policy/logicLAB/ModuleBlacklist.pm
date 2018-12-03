@@ -291,7 +291,7 @@ of the author
 =item * L<IDNA::Punycode> should be replaced by L<Net::IDN::Encode> by recommendation
 of the author
 
-=item * <File::Slurp> should be replaced by either L<File::Slurper>, L<Path::Tiny> or L<IO::All>
+=item * L<File::Slurp> should be replaced by either L<File::Slurper>, L<Path::Tiny> or L<IO::All>
 Ref: L<http://blogs.perl.org/users/leon_timmermans/2015/08/fileslurp-is-broken-and-wrong.html>
 
 =item * L<File::Stat> should be replaced by L<File::stat>
