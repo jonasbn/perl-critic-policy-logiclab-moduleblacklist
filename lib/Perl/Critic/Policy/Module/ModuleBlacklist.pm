@@ -9,7 +9,7 @@ use Perl::Critic::Utils qw{ $SEVERITY_MEDIUM :booleans};
 use Carp qw(carp);
 use Data::Dumper;
 
-our $VERSION = '0.04';
+our $VERSION = '1.00';
 
 use constant supported_parameters => qw(modules debug);
 use constant default_severity     => $SEVERITY_MEDIUM;
@@ -138,12 +138,11 @@ Perl::Critic::Policy::Module::ModuleBlacklist - blacklist modules you want to pr
 
 =head1 AFFILIATION
 
-This policy is a policy in the Perl::Critic::logicLAB distribution. The policy
-is themed: logiclab.
+This policy has no affiliation The policy is themed: C<logiclab> and C<maintenance>.
 
 =head1 VERSION
 
-This documentation describes version 0.03
+This documentation describes version 1.00
 
 =head1 DESCRIPTION
 
@@ -176,7 +175,9 @@ If you want to recommend alternatives to, use fat comma in addition
 
 =over
 
-=item * L<Perl> 5.8.0
+=item * L<Perl> 5.8.0 syntactically for the actual implementation
+
+=item * L<Perl 5.14|https://metacpan.org/pod/release/JESSE/perl-5.14.0/pod/perl.pod> for developing the distribution, which relies on L<Dist::Zilla|http://dzil.org/>. The features on which this policy relies, where introduced in Perl 5.14, but this does not make for an actual requirement for the policy only the recommendations it imposes.
 
 =item * L<Module::Build>
 
@@ -256,7 +257,7 @@ or by sending mail to
 
 =item * L<Perl::Critic>
 
-=item * L<http://logiclab.jira.com/wiki/display/PCLL/Home>
+=item * L<Website|http://jonasbn.github.io/perl-critic-policy-module-moduleblacklist/>
 
 =back
 
@@ -288,11 +289,9 @@ Here follows some recommendations I have picked up.
 =item * L<Error> should be replaced by L<Class::Exception>, by recommendation
 of the author
 
-=item * L<IDNA::Punycode> should be replaced by L<Net::IDN::Encode> by recommendation
-of the author
+=item * L<IDNA::Punycode> should be replaced by L<Net::IDN::Encode> by recommendation of the author, who wrote both
 
-=item * L<File::Slurp> should be replaced by either L<File::Slurper>, L<Path::Tiny> or L<IO::All>
-Ref: L<http://blogs.perl.org/users/leon_timmermans/2015/08/fileslurp-is-broken-and-wrong.html>
+=item * L<File::Slurp> should be replaced by either L<File::Slurper>, L<Path::Tiny> or L<IO::All> See also blog post: "L<File::Slurp is broken and wrong|http://blogs.perl.org/users/leon_timmermans/2015/08/fileslurp-is-broken-and-wrong.html>" by Leon Timmermans
 
 =item * L<File::Stat> should be replaced by L<File::stat>
 
@@ -306,12 +305,11 @@ Ref: L<http://blogs.perl.org/users/leon_timmermans/2015/08/fileslurp-is-broken-a
 
 =back
 
-=head1 ACKNOWLEDGEMENT
+=head1 ACKNOWLEDGEMENTS
 
 =over
 
-=item * Jeffrey Ryan Thalhammer (THALJEF) and the Perl::Critic contributors for
-Perl::Critic
+=item * Perl::Critic authors and maintainers for Perl::Critic
 
 =item * Milan Šorm for the first and second bug reports on this policy
 
@@ -319,7 +317,7 @@ Perl::Critic
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (c) 2014-2015 Jonas B. Nielsen, jonasbn. All rights reserved.
+Copyright (c) 2014-2019 Jonas B. Nielsen, jonasbn. All rights reserved.
 
 Perl::Critic::Policy::Module::ModuleBlacklist is released under
 the Artistic License 2.0
