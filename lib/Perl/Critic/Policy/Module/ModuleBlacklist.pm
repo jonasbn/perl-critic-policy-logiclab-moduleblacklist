@@ -152,6 +152,8 @@ modules are used in the evaluated code a violation is triggered.
 In addition to blacklisting modules it is possible to recommend alternatives to
 blacklisted modules.
 
+And alternative could be Perl::Critic core has L<Perl::Critic::Policy::Modules::ProhibitEvilModules|https://metacpan.org/pod/Perl::Critic::Policy::Modules::ProhibitEvilModules>. which offers a solution in the same problem area.
+
 =head1 CONFIGURATION AND ENVIRONMENT
 
 =head2 modules
@@ -256,6 +258,8 @@ or by sending mail to
 =over
 
 =item * L<Perl::Critic>
+
+=item * L<Perl::Critic::Policy::Modules::ProhibitEvilModules|https://metacpan.org/pod/Perl::Critic::Policy::Modules::ProhibitEvilModules>
 
 =item * L<Website|http://jonasbn.github.io/perl-critic-policy-module-moduleblacklist/>
 
