@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/jonasbn/perl-critic-policy-module-moduleblacklist.svg?branch=master)](https://travis-ci.org/jonasbn/perl-critic-policy-module-moduleblacklist)
+[![Coverage Status](https://coveralls.io/repos/github/jonasbn/perl-critic-policy-module-moduleblacklist/badge.svg)](https://coveralls.io/github/jonasbn/perl-critic-policy-module-moduleblacklist)
+
 # NAME
 
 Perl::Critic::Policy::Module::ModuleBlacklist - blacklist modules you want to prohibit use of
