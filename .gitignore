@@ -25,3 +25,4 @@ README
 *.sublime-project
 *.sublime-workspace
 .vstags
+Perl-Critic-Policy-Modules-ModuleBlacklist-\d+\.\d+
