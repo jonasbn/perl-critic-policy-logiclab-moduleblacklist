@@ -1,6 +1,6 @@
 # NAME
 
-Perl::Critic::Policy::logicLAB::ModuleBlacklist - blacklist modules you want to prohibit use of
+Perl::Critic::Policy::Module::ModuleBlacklist - blacklist modules you want to prohibit use of
 
 # AFFILIATION
 
@@ -13,7 +13,7 @@ This documentation describes version 0.03
 
 # DESCRIPTION
 
-This policy can be used to specify a list of unwanted modules. Using a blacklisting, so if the 
+This policy can be used to specify a list of unwanted modules. Using a blacklisting, so if the
 modules are used in the evaluated code a violation is triggered.
 
 In addition to blacklisting modules it is possible to recommend alternatives to
@@ -25,17 +25,17 @@ blacklisted modules.
 
 You can blacklist modules using the configuration parameter **modules**
 
-    [logicLAB::ModuleBlacklist]
+    [Module::ModuleBlacklist]
     modules = IDNA::Punycode
 
 If you want to blacklist multiple modules specify using a comma separated list:
 
-    [logicLAB::ModuleBlacklist]
+    [Module::ModuleBlacklist]
     modules = Try::Tiny, Contextual::Return, IDNA::Punycode
 
 If you want to recommend alternatives to, use fat comma in addition
 
-    [logicLAB::ModuleBlacklist]
+    [Module::ModuleBlacklist]
     modules = Try::Tiny => TryCatch, Contextual::Return, IDNA::Punycode => Net::IDN::Encode
 
 # DEPENDENCIES AND REQUIREMENTS
@@ -125,12 +125,12 @@ recommend alternatives where possible.
 Here follows some recommendations I have picked up.
 
 - [Error](https://metacpan.org/pod/Error) should be replaced by [Class::Exception](https://metacpan.org/pod/Class::Exception), by recommendation
-the author
+of the author
 - [IDNA::Punycode](https://metacpan.org/pod/IDNA::Punycode) should be replaced by [Net::IDN::Encode](https://metacpan.org/pod/Net::IDN::Encode) by recommendation
-the author
-- <File::Slurp> should be replaced by either <File::Slurper>, <Path::Tiny> or <IO::All>
+of the author
+- [File::Slurp](https://metacpan.org/pod/File::Slurp) should be replaced by either [File::Slurper](https://metacpan.org/pod/File::Slurper), [Path::Tiny](https://metacpan.org/pod/Path::Tiny) or [IO::All](https://metacpan.org/pod/IO::All)
 Ref: [http://blogs.perl.org/users/leon\_timmermans/2015/08/fileslurp-is-broken-and-wrong.html](http://blogs.perl.org/users/leon_timmermans/2015/08/fileslurp-is-broken-and-wrong.html)
-- <File::Stat> should be replaced by <File::stat>
+- [File::Stat](https://metacpan.org/pod/File::Stat) should be replaced by [File::stat](https://metacpan.org/pod/File::stat)
 
 # AUTHOR
 
@@ -146,7 +146,7 @@ Perl::Critic
 
 Copyright (c) 2014-2015 Jonas B. Nielsen, jonasbn. All rights reserved.
 
-Perl::Critic::Policy::logicLAB::ModuleBlacklist is released under
+Perl::Critic::Policy::Module::ModuleBlacklist is released under
 the Artistic License 2.0
 
 The distribution is licensed under the Artistic License 2.0, as specified by

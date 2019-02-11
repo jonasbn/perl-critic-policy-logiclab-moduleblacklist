@@ -6,10 +6,10 @@ use  warnings;
 
 use Test::More tests => 4;
 
-use_ok('Perl::Critic::Policy::logicLAB::ModuleBlacklist');
+use_ok('Perl::Critic::Policy::Module::ModuleBlacklist');
 
-ok(my $policy = Perl::Critic::Policy::logicLAB::ModuleBlacklist->new());
+ok(my $policy = Perl::Critic::Policy::Module::ModuleBlacklist->new());
 
-isa_ok($policy, 'Perl::Critic::Policy::logicLAB::ModuleBlacklist');
+isa_ok($policy, 'Perl::Critic::Policy::Module::ModuleBlacklist');
 
 can_ok($policy, qw(violates));

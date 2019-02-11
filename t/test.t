@@ -6,12 +6,12 @@ use Env qw($TEST_VERBOSE);
 use Data::Dumper;
 use Test::More qw(no_plan);
 
-use_ok 'Perl::Critic::Policy::logicLAB::ModuleBlacklist';
+use_ok 'Perl::Critic::Policy::Module::ModuleBlacklist';
 
 require Perl::Critic;
 my $critic = Perl::Critic->new(
     '-profile'       => 't//example.conf',
-    '-single-policy' => 'logicLAB::ModuleBlacklist'
+    '-single-policy' => 'Module::ModuleBlacklist'
 );
 {
     my @p = $critic->policies;
