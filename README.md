@@ -4,12 +4,11 @@ Perl::Critic::Policy::Module::ModuleBlacklist - blacklist modules you want to pr
 
 # AFFILIATION
 
-This policy is a policy in the Perl::Critic::logicLAB distribution. The policy
-is themed: logiclab.
+This policy has no affiliation The policy is themed: `logiclab` and `maintenance`.
 
 # VERSION
 
-This documentation describes version 0.03
+This documentation describes version 1.00
 
 # DESCRIPTION
 
@@ -18,6 +17,8 @@ modules are used in the evaluated code a violation is triggered.
 
 In addition to blacklisting modules it is possible to recommend alternatives to
 blacklisted modules.
+
+And alternative could be Perl::Critic core has [Perl::Critic::Policy::Modules::ProhibitEvilModules](https://metacpan.org/pod/Perl::Critic::Policy::Modules::ProhibitEvilModules). which offers a solution in the same problem area.
 
 # CONFIGURATION AND ENVIRONMENT
 
@@ -40,7 +41,8 @@ If you want to recommend alternatives to, use fat comma in addition
 
 # DEPENDENCIES AND REQUIREMENTS
 
-- [Perl](https://metacpan.org/pod/Perl) 5.8.0
+- [Perl](https://metacpan.org/pod/Perl) 5.8.0 syntactically for the actual implementation
+- [Perl 5.14](https://metacpan.org/pod/release/JESSE/perl-5.14.0/pod/perl.pod) for developing the distribution, which relies on [Dist::Zilla](http://dzil.org/). The features on which this policy relies, where introduced in Perl 5.14, but this does not make for an actual requirement for the policy only the recommendations it imposes.
 - [Module::Build](https://metacpan.org/pod/Module::Build)
 - [Perl::Critic](https://metacpan.org/pod/Perl::Critic)
 - [Perl::Critic::Utils](https://metacpan.org/pod/Perl::Critic::Utils)
@@ -82,8 +84,8 @@ version described in this documentation (see ["VERSION"](#version)).
     ---------------------------- ------ ------ ------ ------ ------ ------ ------
     File                           stmt   bran   cond    sub    pod   time  total
     ---------------------------- ------ ------ ------ ------ ------ ------ ------
-    ...gicLAB/ModuleBlacklist.pm   88.9   63.6   40.0  100.0  100.0  100.0   83.6
-    Total                          88.9   63.6   40.0  100.0  100.0  100.0   83.6
+    ...Module/ModuleBlacklist.pm   92.4   70.0   62.5  100.0  100.0  100.0   87.3
+    Total                          92.4   70.0   62.5  100.0  100.0  100.0   87.3
     ---------------------------- ------ ------ ------ ------ ------ ------ ------
 
 # BUG REPORTING
@@ -99,7 +101,8 @@ or by sending mail to
 # SEE ALSO
 
 - [Perl::Critic](https://metacpan.org/pod/Perl::Critic)
-- [http://logiclab.jira.com/wiki/display/PCLL/Home](http://logiclab.jira.com/wiki/display/PCLL/Home)
+- [Perl::Critic::Policy::Modules::ProhibitEvilModules](https://metacpan.org/pod/Perl::Critic::Policy::Modules::ProhibitEvilModules)
+- [Website](http://jonasbn.github.io/perl-critic-policy-module-moduleblacklist/)
 
 # MOTIVATION
 
@@ -126,25 +129,22 @@ Here follows some recommendations I have picked up.
 
 - [Error](https://metacpan.org/pod/Error) should be replaced by [Class::Exception](https://metacpan.org/pod/Class::Exception), by recommendation
 of the author
-- [IDNA::Punycode](https://metacpan.org/pod/IDNA::Punycode) should be replaced by [Net::IDN::Encode](https://metacpan.org/pod/Net::IDN::Encode) by recommendation
-of the author
-- [File::Slurp](https://metacpan.org/pod/File::Slurp) should be replaced by either [File::Slurper](https://metacpan.org/pod/File::Slurper), [Path::Tiny](https://metacpan.org/pod/Path::Tiny) or [IO::All](https://metacpan.org/pod/IO::All)
-Ref: [http://blogs.perl.org/users/leon\_timmermans/2015/08/fileslurp-is-broken-and-wrong.html](http://blogs.perl.org/users/leon_timmermans/2015/08/fileslurp-is-broken-and-wrong.html)
+- [IDNA::Punycode](https://metacpan.org/pod/IDNA::Punycode) should be replaced by [Net::IDN::Encode](https://metacpan.org/pod/Net::IDN::Encode) by recommendation of the author, who wrote both
+- [File::Slurp](https://metacpan.org/pod/File::Slurp) should be replaced by either [File::Slurper](https://metacpan.org/pod/File::Slurper), [Path::Tiny](https://metacpan.org/pod/Path::Tiny) or [IO::All](https://metacpan.org/pod/IO::All) See also blog post: "[File::Slurp is broken and wrong](http://blogs.perl.org/users/leon_timmermans/2015/08/fileslurp-is-broken-and-wrong.html)" by Leon Timmermans
 - [File::Stat](https://metacpan.org/pod/File::Stat) should be replaced by [File::stat](https://metacpan.org/pod/File::stat)
 
 # AUTHOR
 
 - Jonas B. Nielsen, jonasbn `<jonasbn@cpan.org>`
 
-# ACKNOWLEDGEMENT
+# ACKNOWLEDGEMENTS
 
-- Jeffrey Ryan Thalhammer (THALJEF) and the Perl::Critic contributors for
-Perl::Critic
+- Perl::Critic authors and maintainers for Perl::Critic
 - Milan Šorm for the first and second bug reports on this policy
 
 # LICENSE AND COPYRIGHT
 
-Copyright (c) 2014-2015 Jonas B. Nielsen, jonasbn. All rights reserved.
+Copyright (c) 2014-2019 Jonas B. Nielsen, jonasbn. All rights reserved.
 
 Perl::Critic::Policy::Module::ModuleBlacklist is released under
 the Artistic License 2.0
