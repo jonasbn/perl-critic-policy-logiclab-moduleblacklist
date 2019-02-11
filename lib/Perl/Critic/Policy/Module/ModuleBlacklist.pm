@@ -13,7 +13,7 @@ our $VERSION = '0.04';
 
 use constant supported_parameters => qw(modules debug);
 use constant default_severity     => $SEVERITY_MEDIUM;
-use constant default_themes       => qw(logiclab);
+use constant default_themes       => qw(logiclab maintenance);
 
 sub applies_to {
     return (
