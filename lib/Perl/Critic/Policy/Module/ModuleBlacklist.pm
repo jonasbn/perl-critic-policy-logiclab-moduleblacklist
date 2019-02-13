@@ -312,7 +312,7 @@ of the author
 
 =over
 
-=item * Jonas B. Nielsen, jonasbn C<< <jonasbn@cpan.org> >>
+=item * Jonas B. (jonasbn) C<< <jonasbn@cpan.org> >>
 
 =back
 
@@ -328,7 +328,7 @@ of the author
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (c) 2014-2019 Jonas B., (jonasbn). All rights reserved.
+Copyright (c) 2014-2019 Jonas B. (jonasbn). All rights reserved.
 
 Perl::Critic::Policy::Module::ModuleBlacklist is released under
 the Artistic License 2.0
