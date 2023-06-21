@@ -2,7 +2,7 @@ requires 'Carp';
 requires 'Readonly';
 requires 'Perl::Critic::Policy';
 requires 'Perl::Critic::Utils';
-requires 'perl', '5.014';
+requires 'perl', '5.37.11';
 
 on 'build', sub {
     requires 'Module::Build', '0.4234';
