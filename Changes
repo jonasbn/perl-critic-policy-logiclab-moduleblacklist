@@ -1,9 +1,4 @@
-Changes file for Perl::Critic::Policy::Module::ModuleBlacklist
-
-1.00 2019-02-11T14:32:54Z Major release, update not required
-
-- Distribution changed name to: Perl::Critic::Policy::Module::ModuleBlacklist
-  from: Perl::Critic::Policy::logicLAB::ModuleBlacklist
+Changes file for Perl::Critic::Policy::logicLAB::ModuleBlacklist
 
 0.04 2015-09-28 Maintenance release, update not required
 

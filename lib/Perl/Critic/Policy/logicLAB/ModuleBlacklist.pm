@@ -1,4 +1,4 @@
-package Perl::Critic::Policy::Module::ModuleBlacklist;
+package Perl::Critic::Policy::logicLAB::ModuleBlacklist;
 
 use strict;
 use warnings;
@@ -141,7 +141,7 @@ __END__
 
 =head1 NAME
 
-Perl::Critic::Policy::Module::ModuleBlacklist - blacklist modules you want to prohibit use of
+Perl::Critic::Policy::logicLAB::ModuleBlacklist - blacklist modules you want to prohibit use of
 
 =head1 AFFILIATION
 
@@ -167,17 +167,17 @@ And alternative could be Perl::Critic core has L<Perl::Critic::Policy::Modules::
 
 You can blacklist modules using the configuration parameter B<modules>
 
-    [Module::ModuleBlacklist]
+    [logicLAB::ModuleBlacklist]
     modules = IDNA::Punycode
 
 If you want to blacklist multiple modules specify using a comma separated list:
 
-    [Module::ModuleBlacklist]
+    [logicLAB::ModuleBlacklist]
     modules = Try::Tiny, Contextual::Return, IDNA::Punycode
 
 If you want to recommend alternatives to, use fat comma in addition
 
-    [Module::ModuleBlacklist]
+    [logicLAB::ModuleBlacklist]
     modules = Try::Tiny => TryCatch, Contextual::Return, IDNA::Punycode => Net::IDN::Encode
 
 =head1 DEPENDENCIES AND REQUIREMENTS
@@ -330,7 +330,7 @@ of the author
 
 Copyright (c) 2014-2019 Jonas B. (jonasbn). All rights reserved.
 
-Perl::Critic::Policy::Module::ModuleBlacklist is released under
+Perl::Critic::Policy::logicLAB::ModuleBlacklist is released under
 the Artistic License 2.0
 
 The distribution is licensed under the Artistic License 2.0, as specified by
