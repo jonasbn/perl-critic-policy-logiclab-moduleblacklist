@@ -25,4 +25,5 @@ README
 *.sublime-project
 *.sublime-workspace
 .vstags
-Perl-Critic-Policy-Modules-ModuleBlacklist-\d+\.\d+
+Perl-Critic-Policy-logicLAB-ModuleBlacklist-\d+\.\d+
+local/

@@ -28,3 +28,7 @@ allow_leading_tabs = 0
 [-RegularExpressions::RequireLineBoundaryMatching]
 [-InputOutput::RequireCheckedSyscalls]
 [-CodeLayout::RequireTidyCode]
+[-Documentation::RequirePodLinksIncludeText]
+
+[Documentation::PodSpelling]
+stop_words_file = .github/wordlist.txt

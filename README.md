@@ -3,7 +3,7 @@
 
 # NAME
 
-Perl::Critic::Policy::Module::ModuleBlacklist - blacklist modules you want to prohibit use of
+Perl::Critic::Policy::logicLAB::ModuleBlacklist - blacklist modules you want to prohibit use of
 
 # AFFILIATION
 
@@ -29,30 +29,30 @@ And alternative could be Perl::Critic core has [Perl::Critic::Policy::Modules::P
 
 You can blacklist modules using the configuration parameter **modules**
 
-    [Module::ModuleBlacklist]
+    [logicLAB::ModuleBlacklist]
     modules = IDNA::Punycode
 
 If you want to blacklist multiple modules specify using a comma separated list:
 
-    [Module::ModuleBlacklist]
+    [logicLAB::ModuleBlacklist]
     modules = Try::Tiny, Contextual::Return, IDNA::Punycode
 
 If you want to recommend alternatives to, use fat comma in addition
 
-    [Module::ModuleBlacklist]
+    [logicLAB::ModuleBlacklist]
     modules = Try::Tiny => TryCatch, Contextual::Return, IDNA::Punycode => Net::IDN::Encode
 
 # DEPENDENCIES AND REQUIREMENTS
 
 - [Perl](https://metacpan.org/pod/Perl) 5.8.0 syntactically for the actual implementation
 - [Perl 5.14](https://metacpan.org/pod/release/JESSE/perl-5.14.0/pod/perl.pod) for developing the distribution, which relies on [Dist::Zilla](http://dzil.org/). The features on which this policy relies, where introduced in Perl 5.14, but this does not make for an actual requirement for the policy only the recommendations it imposes.
-- [Module::Build](https://metacpan.org/pod/Module::Build)
-- [Perl::Critic](https://metacpan.org/pod/Perl::Critic)
-- [Perl::Critic::Utils](https://metacpan.org/pod/Perl::Critic::Utils)
-- [Perl::Critic::Policy](https://metacpan.org/pod/Perl::Critic::Policy)
-- [Test::More](https://metacpan.org/pod/Test::More)
-- [Test::Perl::Critic](https://metacpan.org/pod/Test::Perl::Critic)
-- [Data::Dumper](https://metacpan.org/pod/Data::Dumper)
+- [Module::Build](https://metacpan.org/pod/Module%3A%3ABuild)
+- [Perl::Critic](https://metacpan.org/pod/Perl%3A%3ACritic)
+- [Perl::Critic::Utils](https://metacpan.org/pod/Perl%3A%3ACritic%3A%3AUtils)
+- [Perl::Critic::Policy](https://metacpan.org/pod/Perl%3A%3ACritic%3A%3APolicy)
+- [Test::More](https://metacpan.org/pod/Test%3A%3AMore)
+- [Test::Perl::Critic](https://metacpan.org/pod/Test%3A%3APerl%3A%3ACritic)
+- [Data::Dumper](https://metacpan.org/pod/Data%3A%3ADumper)
 - [Carp](https://metacpan.org/pod/Carp)
 
 # INCOMPATIBILITIES
@@ -67,13 +67,13 @@ There are no known bugs or limitations
 
 The following policies have been disabled for this distribution
 
-- [Perl::Critic::Policy::ValuesAndExpressions::ProhibitConstantPragma](https://metacpan.org/pod/Perl::Critic::Policy::ValuesAndExpressions::ProhibitConstantPragma)
+- [Perl::Critic::Policy::ValuesAndExpressions::ProhibitConstantPragma](https://metacpan.org/pod/Perl%3A%3ACritic%3A%3APolicy%3A%3AValuesAndExpressions%3A%3AProhibitConstantPragma)
 
     Constants are good, - see the link below.
 
     - [https://logiclab.jira.com/wiki/display/OPEN/Perl-Critic-Policy-ValuesAndExpressions-ProhibitConstantPragma](https://logiclab.jira.com/wiki/display/OPEN/Perl-Critic-Policy-ValuesAndExpressions-ProhibitConstantPragma)
 
-- [Perl::Critic::Policy::NamingConventions::Capitalization](https://metacpan.org/pod/Perl::Critic::Policy::NamingConventions::Capitalization)
+- [Perl::Critic::Policy::NamingConventions::Capitalization](https://metacpan.org/pod/Perl%3A%3ACritic%3A%3APolicy%3A%3ANamingConventions%3A%3ACapitalization)
 
 See also `t/perlcriticrc`
 
@@ -103,7 +103,7 @@ or by sending mail to
 
 # SEE ALSO
 
-- [Perl::Critic](https://metacpan.org/pod/Perl::Critic)
+- [Perl::Critic](https://metacpan.org/pod/Perl%3A%3ACritic)
 - [Perl::Critic::Policy::Modules::ProhibitEvilModules](https://metacpan.org/pod/Perl::Critic::Policy::Modules::ProhibitEvilModules)
 - [Website](http://jonasbn.github.io/perl-critic-policy-module-moduleblacklist/)
 
@@ -130,11 +130,11 @@ recommend alternatives where possible.
 
 Here follows some recommendations I have picked up.
 
-- [Error](https://metacpan.org/pod/Error) should be replaced by [Class::Exception](https://metacpan.org/pod/Class::Exception), by recommendation
+- [Error](https://metacpan.org/pod/Error) should be replaced by [Class::Exception](https://metacpan.org/pod/Class%3A%3AException), by recommendation
 of the author
-- [IDNA::Punycode](https://metacpan.org/pod/IDNA::Punycode) should be replaced by [Net::IDN::Encode](https://metacpan.org/pod/Net::IDN::Encode) by recommendation of the author, who wrote both
-- [File::Slurp](https://metacpan.org/pod/File::Slurp) should be replaced by either [File::Slurper](https://metacpan.org/pod/File::Slurper), [Path::Tiny](https://metacpan.org/pod/Path::Tiny) or [IO::All](https://metacpan.org/pod/IO::All) See also blog post: "[File::Slurp is broken and wrong](http://blogs.perl.org/users/leon_timmermans/2015/08/fileslurp-is-broken-and-wrong.html)" by Leon Timmermans
-- [File::Stat](https://metacpan.org/pod/File::Stat) should be replaced by [File::stat](https://metacpan.org/pod/File::stat)
+- [IDNA::Punycode](https://metacpan.org/pod/IDNA%3A%3APunycode) should be replaced by [Net::IDN::Encode](https://metacpan.org/pod/Net%3A%3AIDN%3A%3AEncode) by recommendation of the author, who wrote both
+- [File::Slurp](https://metacpan.org/pod/File%3A%3ASlurp) should be replaced by either [File::Slurper](https://metacpan.org/pod/File%3A%3ASlurper), [Path::Tiny](https://metacpan.org/pod/Path%3A%3ATiny) or [IO::All](https://metacpan.org/pod/IO%3A%3AAll) See also blog post: "[File::Slurp is broken and wrong](http://blogs.perl.org/users/leon_timmermans/2015/08/fileslurp-is-broken-and-wrong.html)" by Leon Timmermans
+- [File::Stat](https://metacpan.org/pod/File%3A%3AStat) should be replaced by [File::stat](https://metacpan.org/pod/File%3A%3Astat)
 
 # AUTHOR
 
@@ -149,7 +149,7 @@ of the author
 
 Copyright (c) 2014-2019 Jonas B. (jonasbn). All rights reserved.
 
-Perl::Critic::Policy::Module::ModuleBlacklist is released under
+Perl::Critic::Policy::logicLAB::ModuleBlacklist is released under
 the Artistic License 2.0
 
 The distribution is licensed under the Artistic License 2.0, as specified by
